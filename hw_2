@@ -1,0 +1,99 @@
+# Задание 1
+    #1.1
+    a = "test. 1234."
+    a.isdigit()
+
+    #1.2
+    a.count(' ')
+
+    #1.3
+    a.count('.')
+
+    #1.4
+    d = "Homework"
+    print(d.zfill(100))
+
+    #1.5
+    e = "upper case"
+    e.title
+
+    #1.6
+    f = "string text"
+    f.endswith('ing')
+
+    #1.7
+    f.find('a')
+
+    #1.8
+    f.split()
+
+# Задание 2
+    #2.1
+    a=367
+    b=127
+    pow(a*2+b*2,.5)
+
+    #2.2
+    c=str(45)
+    c[0]
+
+    #2.3
+    d=str(123)
+    int(d[0])+int(d[1])+int(d[2])
+
+    #2.4
+    n=123
+    n%2 # =1
+    print(n+1)
+
+    #2.5
+    x=1.23
+    print(x-int(x))
+
+    #2.6
+    v=str(x-int(x))
+    print(v[0])
+
+    #2.7
+    a=str(1.23)
+    sp=a.split('.')
+    t=str(sp[1])
+    print(t[0])
+
+# Задание 3
+    #3.1
+    l=['qwe','rty','uio','lkj','hgf',dsa']
+    print(l[-3])
+
+    #3.2
+    s=str(l[1])
+    print(s[0])
+
+    #3.3
+    j=str(l[-1])
+    print(j[-1])
+
+    #3.4
+    l.append('end')
+
+    #3.5
+    l.incert(len(l)%2,'mid')
+
+    #3.6
+    l.pop(0)
+
+    #3.7
+    l.remove('world')
+
+# Задание 4.
+    #4.1
+    dic={«title»:'str', «price»:123, «ingredients»:[4,5,6]}
+    dic.update([«description»: 'text'])
+
+    #4.2
+
+
+
+
+
+
