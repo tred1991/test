@@ -5,60 +5,60 @@
 #         print(a[2], a[-2], a[0:4], a[:-2], a[::2], a[1::2], a[::-1], a[::-2], a[-2::-2], a[-2:0:-1], len(a), sep="\n")
 #     except : pass
 # Задание 2
-a = input("Value 1: ")
-b = input("Value 2: ")
-if a.isdigit() is not True or b.isdigit() is not True:
-    print(a + ' ' + b)
-else:
-    s = float(a) + float(b)
-    print(s)
-# Задание 3 кажется некрасивое решение
-def song(row=3, la=3, end=0):
-    result = ("la-"*(la-1) + "la.\n")*row
-    if end != 0:
-        result = ("la-"*(la-1) + "la!\n")*row
-    return result
-d = song(row=3, la=10, end=1)
-print(d)
-
-# Задание 4
-def write_number():
-    while True:
-        a = input("Write number:")
-        if a.isdigit() is True:
-            break
-    return a
-
-b = write_number()
-
-def write_world():
-    while True:
-        a = input("Write world:")
-        a.find(' ')
-        if a.find(' ') == -1:
-            break
-    return a
-b = write_world()
-
-def is_year_leap(year):
-    if (year%4 == 0 and year%100 != 0) or year%400 == 0:
-        a = True
-    else:
-        a = False
-    return a
-d = is_year_leap(year=2000)
-print(d)
-print(type(d))
-
-def triangle(a, b, c):
-    if int(c) < (int(a) + int(b)) and int(b) < (int(a) + int(c)) and int(a) < (int(c) + int(b)):
-        g = True
-    else:
-        g = False
-    return g
-d = triangle(a=5, b=4, c=6)
-print(d)
-print(type(d))
+# a = input("Value 1: ")
+# b = input("Value 2: ")
+# if a.isdigit() is not True or b.isdigit() is not True:
+#     print(a + ' ' + b)
+# else:
+#     s = float(a) + float(b)
+#     print(s)
+# # Задание 3 кажется некрасивое решение
+# def song(row=3, la=3, end=0):
+#     result = ("la-"*(la-1) + "la.\n")*row
+#     if end != 0:
+#         result = ("la-"*(la-1) + "la!\n")*row
+#     return result
+# d = song(row=3, la=10, end=1)
+# print(d)
+#
+# # Задание 4
+# def write_number():
+#     while True:
+#         a = input("Write number:")
+#         if a.isdigit() is True:
+#             break
+#     return a
+#
+# b = write_number()
+#
+# def write_world():
+#     while True:
+#         a = input("Write world:")
+#         a.find(' ')
+#         if a.find(' ') == -1:
+#             break
+#     return a
+# b = write_world()
+#
+# def is_year_leap(year):
+#     if (year%4 == 0 and year%100 != 0) or year%400 == 0:
+#         a = True
+#     else:
+#         a = False
+#     return a
+# d = is_year_leap(year=2000)
+# print(d)
+# print(type(d))
+#
+# def triangle(a, b, c):
+#     if int(c) < (int(a) + int(b)) and int(b) < (int(a) + int(c)) and int(a) < (int(c) + int(b)):
+#         g = True
+#     else:
+#         g = False
+#     return g
+# d = triangle(a=5, b=4, c=6)
+# print(d)
+# print(type(d))
 
 def  distance(x1,x2,y1,y2):
     d = ((x2-x1)**2+(y2-y1)**2)**0.5

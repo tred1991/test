@@ -22,23 +22,22 @@
 # Exercise 3
 class Person():
     def __init__(self, full_name='', age=''):
-        self.full_name = full_name
         self.age = age
+        self.full_name = full_name
 
-    def name_from_full_name(self, full_name):
-        # a = full_name.find(' ')
-        # b = full_name[0:a]
-        return self.full_name[:full_name.find(' ')]
+    def name_from_full_name(self):
+        return self.full_name[:self.full_name.find(' ')]
 
-    def surname_from_full_name(self, full_name):
-        # a = full_name.find(' ')
-        return self.full_name[full_name.find(' '):]
+    def surname_from_full_name(self):
+        return self.full_name[self.full_name.find(' ')+1:]
 
     def d_print(self):
-        d = self.name_from_full_name(full_name="Peter Petrov")
-        d1 = self.surname_from_full_name(full_name="Peter Petrov")
-        print(d, d1)
+        d = self.name_from_full_name()
+        d1 = self.surname_from_full_name()
+        print(d, d1, sep='\n')
 
+f = Person(full_name="Peter Petrov")
+g = f.d_print()
 
 
 
