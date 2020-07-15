@@ -93,7 +93,7 @@ r = print(s.more_salary(add=5), s.position_level())
 class ITEmployee(Employee):
     """class with new arg skills"""
 
-    def __init__(self, full_name='', age='', position='', salary='', expir='', skills=''):
+    def __init__(self, full_name='', age='', position='', salary='', expir=''):
         """determinate new variables for ITEmployee class"""
         Employee.__init__(self, full_name, age, position, salary, expir)
         self.skills = []
@@ -106,14 +106,90 @@ class ITEmployee(Employee):
     def add_skill(self, new_skill):
         """add one new skill for employee"""
         self.skills.append(new_skill)
+        return self.skills
 
     def add_skills(self, *new):
         """add list of skills"""
-        if new:
-            self.skills.append(new)
+        self.skills.append(new)
+        return self.skills
 
-it = ITEmployee(full_name="Peter Petrov", age='1991', position='QA', salary='123', expir='5', skills=['volly'])
-itpr = print(it.add_skill(new_skill="ref"), it.add_skills("rterte","eretyty"))
+it = ITEmployee(full_name="Peter Petrov", age='1991', position='QA', salary='123', expir='5')
+itpr = print(it.add_skill(new_skill="ref"), it.add_skills("rterte", "eretyty"))
+
+class Perimeter():
+
+    def __init__(self, a=0, b=0):
+        self.a = a
+        self.b = b
+
+    def __str__(self):
+        """formatting data for print"""
+        return "<Perimeter object: {} {}>".format(self.a, self.b)
+
+    def squre(self):
+        S = self.a * self.b
+        return S
+
+    def perim(self):
+        P = (int(self.a) + int(self.b)) * 2
+        return P
+
+res = Perimeter(a=10, b=5)
+resprint = print(res.squre(),res.perim())
+
+class Point():
+
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        """formatting data for print"""
+        return "<Perimeter object: {} {}>".format(self.x, self.y)
+
+    def distance_zero_point(self):
+        len = ((self.x**2)+(self.y**2))**0.5
+        return len
+
+    def distance_between(self, x1, y1):
+        lenpoint = ((self.x**2 + x1**2)+(self.y**2 + y1**2))**0.5
+        return lenpoint
+
+respoint = Point(x=5,y=8)
+resp = print(respoint.distance_zero_point(), respoint.distance_between(x1=10, y1=15))
+
+
+class Student():
+
+    def __init__(self, full_name='', specialty='', year=2008):
+        self.full_name = full_name
+        self.specialty = specialty
+        self.year = year
+        self.marks = []
+
+    def __str__(self):
+        """formatting data for print"""
+        return "<Student object: {} {} {}>".format(self.full_name, self.specialty, self.year)
+
+    def add_mark(self, rating):
+        self.marks.append(rating)
+        return self.marks
+
+    def average(self):
+        av = sum(self.marks)/len(self.marks)
+        return av
+
+    def years(self, current):
+        diff = current - self.year
+        return diff
+
+resmark = Student(full_name='Ivan Ivanov', specialty='metrology', year=2009)
+printmark = print(resmark.add_mark(5), resmark.add_mark(4), resmark.average(), resmark.years(current=2020), sep=' -- ')
+
+
+
+
+
 
 
 
